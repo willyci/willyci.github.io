@@ -1,0 +1,1529 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<head>
+    <!--<script src="http://d.instashareonline.com/l/load.js"></script>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <title>links</title>
+    <script type="text/javascript" src="tabber.js"></script>
+    <link rel="stylesheet" href="example.css" TYPE="text/css" MEDIA="screen" />
+    <script type="text/javascript" src="cal.js"></script>
+    <script type="text/javascript">
+        document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+    </script>
+    <script type="text/javascript" src="jscolor/jscolor.js"></script>
+    <script src="src/js/jscal2.js"></script>
+    <script src="src/js/lang/en.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/css/jscal2.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/border-radius.css" />
+    <link rel="stylesheet" type="text/css" href="src/css/steel/steel.css" />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/jquery-ui.min.js"></script>
+    <script src="javascripts/json2.js"></script>
+    <script src="javascripts/jstorage.js"></script>
+    <script src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.qrcode.min.js"></script>
+    <script>
+        var ip = '<!--#echo var="REMOTE_ADDR"-->';
+        $(document).ready(function getip() {
+            document.myform.ipaddr.value = ip;
+        });
+        $(function() {
+            ta.value = $.jStorage.get('ta');
+        })
+        $(function() {
+            ta.value = $.jStorage.get('ta');
+        })
+
+        function init() {
+
+
+            var getTime = function() {
+                var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                var today = new Date();
+                var hour = today.getHours();
+                var min = today.getMinutes();
+                var pm = "";
+                if (hour > 12) {
+                    hour = hour - 12;
+                    pm += "PM";
+                }
+                if (hour < 10) {
+                    hour = "0" + hour;
+                }
+                if (min < 10) {
+                    min = "0" + min;
+                }
+                var time = hour + ':' + min + " " + pm;
+
+
+                var clock = document.querySelector('#clock');
+                clock.innerHTML = time;
+
+                todayd.innerHTML = monthNames[today.getMonth()] + " " + today.getDate() + ", " + today.getFullYear();
+            }
+
+
+            getTime();
+
+            setInterval(getTime, 60000);
+
+
+            $('#ta').bind('input propertychange', function() {
+                $.jStorage.set('ta', ta.value);
+                //console.log('ta = '+ta.value);  
+            });
+        }
+        window.onbeforeunload = function() {
+            $.jStorage.set('ta', ta.value);
+        };
+        $(document).ready(init);
+    </script>
+</head>
+
+<body>
+    <div class="tabber">
+        <div class="tabbertab">
+            <h2>links</h2>
+            <p>
+                <table border="1px">
+                    <tr>
+                        <td valign="top" align="left">
+                            <!--
+                     <a href="http://inside.umassmed.edu/">home page</a>&nbsp;&nbsp;
+                     <a href='https://outlook.office365.com/owa/?realm=umassmed.edu'>email</a>&nbsp;
+					  <a title="office 365 products" href="http://portal.umassmed.edu/" >office</a><br />
+                     <a href='http://edit-www.umassmed.edu/EPiServer/Cms/#context=epi.cms.contentdata:///4'>EPI</a>&nbsp;&nbsp;
+                     <a href='http://epi1-www.umassmed.edu:12001/'>1</a>/<a href='http://epi2-www.umassmed.edu:12001/'>2</a>&nbsp;
+                     <a href="http://edit-inside.umassmed.edu/EPiServer/Cms/#context=epi.cms.contentdata:///5">inside</a>&nbsp;&nbsp;
+                     <a href='http://qaedit-www.umassmed.edu/EPiServer/Cms/#context=epi.cms.contentdata:///4'>QA</a>
+                     <a href="http://lslintranet1.umassmed.edu/episerver/cms/">library</a>
+                     <br />
+                     <a href='https://tasks.office.com/umassmed.edu/en-US/Home/Planner/#/plantaskboard?groupId=5b1de801-19d1-43a0-bef6-33ce7ff9b97c&planId=jBLxhD-d-UCmhQXBw80HuGQAA10x'>planner</a>&nbsp;
+					 <a href='https://remote.umassmed.edu/'>vpn</a>
+                        -->
+                            <!-- <a href='https://tfs.umassmed.edu/tfs/UMASSMED/IT/The%20Wolf%20Pack/_backlogs/board/Backlog%20items'>TFS</a>&nbsp;&nbsp;
+                     <a href="http://i.umassmed.edu/ServiceCatalog/Index.html#/Server">ServiceCatalog</a>
+						-->
+                            <!--
+					  <br />
+                     <a href="https://sp.umassmed.edu/sites/Chancellor/vcaf/is/projects/WI/Web%20Initiaves%20%20Server%20Wiki/Home.aspx">sharepoint</a>&nbsp;
+                     <a href="https://share.umassmed.edu/sites/umassmed/IT/twp/_layouts/15/start.aspx#/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2Fumassmed%2FIT%2Ftwp%2FShared%20Documents%2FEpiserver%20Admin%20Documentation&FolderCTID=0x0120009F68C3A34770224394576CA2348EC52F&View=%7B9BC26336%2D4202%2D45CC%2DAC18%2D616820A54729%7D&InitialTabId=Ribbon%2ERead&VisibilityContext=WSSTabPersistence">2</a>&nbsp;
+                     <a href="https://umassmed.service-now.com/nav_to.do?uri=%2Fhome.do">service-now</a>&nbsp;&nbsp;
+                     <a href="https://share.umassmed.edu/sites/umassmed/IT/twp/_layouts/15/start.aspx#/SitePages/Home.aspx">wiki</a>
+                     <br/>
+                     <a href="http://www.browserstack.com/start">browserstack</a>&nbsp;
+					 <a href="https://octopus.umassmed.edu/octopus/app#/">octopus</a>
+					 <br/>
+                     <a href="https://umwwsqars01.ad.umassmed.edu/HD/">active directry</a>&nbsp;
+
+					  <a href="http://172.17.93.240/">h1</a>&nbsp;
+					  <a href="http://172.17.91.2/">h2</a>&nbsp;
+					  <br/>
+					  <a  href="https://share.umassmed.edu/sites/umassmed/IT/twp/_layouts/15/start.aspx#/SitePages/Create%20a%20Microsite.aspx">new site</a>
+					  <br/>
+                     <a href="http://umassmed.edu/hr/hrdirect/">hr direct</a>&nbsp;
+                     <a href='https://umass.apps.journyx.com/jtcgi/wte.pyc'>journyx</a><br/>
+                     <a href="http://spaceinventory.umassmed.edu/spaceinventory/property/tablist">umass school building map</a><br/>
+                     <a href="https://assets.adobe.com/assets/recent">adobe cloud</a>&nbsp;
+					  <a href="https://portal.azure.com/#">azure</a><br/>
+                     <A href="http://resourcescheduler.umassmed.edu/resourcescheduler/login.asp">resource scheduler</A><br/><br/>
+                      -->
+                            <a href="https://172.18.22.75:8000/admin/">admin</a>&nbsp;
+                            <a href="https://172.18.22.75:6162/">monitor</a>&nbsp;
+                            <a href="https://172.18.22.75:8888/">search</a>&nbsp;
+                            <a href="https://172.18.22.75:8888/workflowDesigner/">workflow</a>
+                            <br />
+                            <a href="https://172.18.22.75:8983/solr">solr</a>&nbsp;
+                            <a href="https://cluster119ba-vm.lab.archivas.com:8000/">cluster119ba-vm</a>&nbsp;
+                            <a href="http://odin/dashboard/">odin</a>&nbsp;
+                            <a href="http://build-master:8080/view/Foundry/">build</a><br />
+                            <a href="https://cluster-long-running.lab.archivas.com:8000/admin/#!/dashboard">long_running</a>&nbsp;&nbsp;
+                            <a href="https://admin.cluster-ens-hcp.lab.archivas.com:8000/">admin cluster archivas</a>&nbsp;&nbsp;
+                            <br /><br />
+                            <a href="https://outlook.office365.com/mail/inbox/">email</a>&nbsp;
+                            <a href="https://hitachivantara-eng.slack.com/messages/C0818VC5S/">slack</a>&nbsp;
+                            <a href="https://hcpanywhere.hitachivantara.com/userportal/#/files/">files</a>&nbsp;
+                            <a href="http://jira.wal.hds.com/secure/RapidBoard.jspa?rapidView=355&projectKey=HCI&view=planning&selectedIssue=HCI-971&issueLimit=100">jira</a>&nbsp;
+                            <a href="http://build-master:8080/">build</a>
+                            <a href="http://hci-jenkins/me/my-views/view/all/">HCI Jenkins</a>
+                            <br />
+
+                            <a href="http://apollo.wal.hds.com/display/HCI/HCI">wiki</a>&nbsp;
+                            <a href="http://odin.wal.hds.com/dashboard/">lab</a>&nbsp;
+                            <a href="http://tts.wal.hds.com/index.php">tts</a>&nbsp;
+                            <a href="http://gitlab.wal.hds.com/hci/hci/tree/bears_dev">git</a>&nbsp;
+                            <a href="http://reviewboard.wal.hds.com/groups/HCI/">review</a>&nbsp;
+                            <a href="https://walvpn.hitachivantara.com">vpn</a>&nbsp;
+                            <br />
+                            <br />
+                            <a href="https://online.adp.com/prwc/login.html">payroll</a>&nbsp;
+                            <a href="https://mytime.hitachivantara.com/wfc/navigator/logon">time</a>&nbsp;
+                            <a href="https://sso.hitachivantara.com/content/hds/sso/dashboard.html">portal</a>&nbsp;
+                            <a href="https://hitachivantara.service-now.com/">hr</a>&nbsp;&nbsp;<br /><br />
+                            <A href="https://www.turbosquid.com/">ts3d</a>&nbsp;
+                            <A href="http://tf3dm.com/">tf3dm</a>&nbsp;
+                            <a href="https://www.cgtrader.com/3d-models">cg</a>&nbsp;
+                            <a href="https://clara.io/library">clara</a>&nbsp;
+                            <a href="https://grabcad.com/library">grabCAD</a>&nbsp;<br />
+                            <a href="https://alternativeto.net/">alternative</a>&nbsp;
+                            <!--
+                        <a href="http://wiki.s-web.com/index.php/Main_Page">aps_wiki</a>&nbsp;&nbsp;
+                        <a href="https://webmail.aps-remote.com/">aps web email</a><br />
+                                             <a href="https://portal.adp.com/">aps portal</a>&nbsp;&nbsp;
+                        -->
+                            <!--
+                        <a href="http://staging.courseserver.com/courses/rmfcmecourses/">course server</a><br />
+                        <a href="http://dev1.eng.aps-web.com/">dev1</a><br />      
+                        <a href="http://192.168.1.116/Profile/Account/LogOn?ReturnUrl=%2f">aps-eng01</a><br />   
+                        <a href="http://internal.aps-web.com/bugzilla/report.cgi?x_axis_field=assigned_to&y_axis_field=product&z_axis_field=&query_format=report-table&short_desc_type=allwordssubstr&short_desc=&product=Gnosis&long_desc_type=substring&long_desc=&bug_file_loc_type=allwordssubstr&bug_file_loc=&keywords_type=allwords&keywords=&deadlinefrom=&deadlineto=&bug_status=NEW&bug_status=ASSIGNED&bug_status=REOPENED&emailassigned_to1=1&emailtype1=substring&email1=&emailassigned_to2=1&emailreporter2=1&emailcc2=1&emailtype2=substring&email2=&bugidtype=include&bug_id=&chfieldfrom=&chfieldto=Now&chfieldvalue=&format=table&action=wrap&field0-0-0=noop&type0-0-0=noop&value0-0-0=">bugzilla</a> -->
+                            <!--&nbsp;&nbsp;
+                        <a href="https://aps-web.atlassian.net/issues/?filter=12803">JIRA</a><br />
+                        <a href="https://www.dropbox.com/home/APS-UX">aps-us dropbox</a><br/><br/>
+                        
+                        <a href="http://pqf.aps-content.com">pqf</a>&nbsp;&nbsp;
+                        <a href="http://pqf.aps-content.com/report.asp">report</a>
+                        <br/>
+                        <a href="http://storyboard.aps-content.com/">storyboard</a><br/>
+                        -->
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="http://www.google.com/">
+                                <img src="http://www.google.com/intl/en/images/logo.gif" width="138" height="50" alt="Google" border="0" /></a><br />
+                            <form action="http://www.google.com/search" method="get">
+                                <input type="text" name="q" value="" size="25" /> <input type="submit" value="Search" />
+                            </form>
+                            <form method="post" action="" name="myform">
+                                <input type="text" name="ipaddr" style="width:80px" readonly>
+                                <a href='http://whatismyipaddress.com/'>ip</a>
+                            </form>
+                            <input class="color" /><br />
+                            <form name="search" method="get" action="http://www.ebay.com/sch/i.html">
+                                Search ebay
+                                <input type="text" name="_nkw" size="7">
+                                <input type="submit" value="Go" width="20" height="16" border="0">
+                            </form>
+                            <form action="http://www.amazon.com/s/" method="get" name="search" target="_top">
+                                Search Amazon
+                                <input id="field-keywords" name="field-keywords" type="text" size="8">
+                                <input type="hidden" name="tag" value="flexcodeorg-20">
+                                <input type="hidden" name="link_code" value="wsw">
+                                <input type="hidden" name="_encoding" value="UTF-8">
+                                <input type="hidden" name="search-alias" value="aps">
+                                <input type="submit" value="Go" width="20" height="16" border="0">
+                            </form>
+                            <br />
+
+
+                            <div id="clock" style="font-size:50px;margin-top:-20px;"></div><br />
+                            <div id="todayd" style="font-size:30px;margin-top:-26px;"></div>
+
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td style="width: 20em">
+                                        <div id="cont"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                Calendar.setup({
+                                    cont: "cont",
+                                    fdow: 0,
+                                    selectionType: Calendar.SEL_MULTIPLE,
+                                    showTime: 12,
+                                    weekNumbers: true,
+                                    disabled: function(date) {
+                                        // disable all dates between 5 and 15 every month
+                                        return (date.getDate() >= 5 &&
+                                            date.getDate() <= 15);
+                                    },
+
+                                    // checkRange: true, // if you simply want to disallow selection but not display anything
+
+                                    checkRange: function(date, cal) {
+                                        // if you pass a function, it gets called and receives the first date that
+                                        // disallowed the selection, and the calendar object.
+                                        alert("Date " + date + " cannot be selected");
+                                    },
+                                    onTimeChange: function(cal) {
+                                        var h = cal.getHours(),
+                                            m = cal.getMinutes();
+                                        // zero-pad them
+                                        if (h < 10) h = "0" + h;
+                                        if (m < 10) m = "0" + m;
+                                        $("calendar-info").innerHTML = Calendar.formatString("Time changed to ${hh}:${mm}", {
+                                            hh: h,
+                                            mm: m
+                                        });
+                                    }
+                                });
+                                //]]>
+                            </script>
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;time=&amp;date=&amp;ttype=&amp;q=125+Coolidge+St,+Sherborn,+MA+01770&amp;sll=42.279722,-71.372938&amp;sspn=0.031117,0.080338&amp;ie=UTF8&amp;ll=42.270767,-71.376114&amp;spn=0.031121,0.10849&amp;z=14&amp;om=0">google map</a>&nbsp;
+                            <a href="http://maps.live.com/?q=&amp;mkt=en-us&amp;scope=&amp;FORM=LIVSOP#JnE9eXAuMTI1K0Nvb2xpZGdlK1N0JTJjK1NoZXJib3JuJTJjK01BKzAxNzcwJTdlc3N0LjAlN2VwZy4xJmJiPTU0LjkyNzE0MTg2NDU0NjQlN2UtMzcuMDAxOTUzMTI1JTdlMjYuNzQ1NjEwMzgyMTk5JTdlLTEwNS4yMDUwNzgxMjU=">msn map</a><br />
+                            <a href="http://www.weather.com/weather/tenday/01770?from=36hr_fcst10DayLink_undeclared">weather</a>&nbsp;&nbsp;
+                            <a href="http://my.yahoo.com/">tv</a>&nbsp;&nbsp;
+                            <a href="http://books.google.cn/">book</a>&nbsp;&nbsp;
+                            <br />
+                            <a href="http://willyci.com/timeSheet.html"> time sheet </A>&nbsp; <a href="http://www.mlcalc.com/">loan cal</a><br />
+                            <a href="http://translate.google.com/translate_t?langpair=en|zh-CN">Google Translate</a><br /><br />
+                            <a href="http://192.168.100.1/">moto</a>&nbsp;&nbsp;&nbsp;
+                            <a href="http://192.168.0.1/">dlink r</a>&nbsp;<br />
+                            <a href="http://192.168.0.116//">dlink n</a>&nbsp;
+                            <a href="http://24.34.93.252:7070/gui/">U</a>&nbsp;
+                            <a href="http://192.168.0.109:6942/">U2</a><br />
+                            <a href="http://yang.sinaway.com/p3/">proxy</a>&nbsp;&nbsp;
+                            <a href="http://yang.sinaway.com/p2/">p2</a>&nbsp;&nbsp;
+                            <a href="https://cyberghostvpn.com/proxy/?proxy=nl.proxy.cyberghostvpn.com">p3</a><br />
+                            <a href="http://y.qq.com/webplayer/player.html">music</a>&nbsp;&nbsp;
+                            <a href="http://www.live365.com/stations/bluemonty">radio</a>&nbsp;&nbsp;
+                            <a href="http://www.live365.com/stations/bluemonty2">2</a>&nbsp;&nbsp;<br />
+                            <a href="http://www.flexcode.org/screen_test/">screen test</a>&nbsp;&nbsp;
+                            <a href="http://webcamtoy.com/">webcamtoy</a><br />
+                            <a href="http://www.dullr.com/">篆书字体</a>&nbsp;
+                            <a href="http://www.99zhuanshu.com/">2</a>&nbsp;
+                            <a href="http://asoftmurmur.com/">rain sound</a>&nbsp;
+                            <a href="http://loderunnerwebgame.com/game/">lode runner</a><br />
+                            <a href="http://www.qt86.com">艺术字体</a>&nbsp;
+                            <a href="http://www.popzitizh.com/">2</a>&nbsp;
+                            <a href="http://www.diyiziti.com/">3</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="left">
+                            <a href="http://backbonejs.org/">backbone.js</a>&nbsp;&nbsp;
+                            <a href="https://angular.io/">angular</a>&nbsp;&nbsp;
+                            <a href="https://vuejs.org/">vue.js</a><br />
+                            <a href="http://jsbin.com/">jsbin</a>&nbsp;&nbsp;
+                            <a href="https://reactjs.org/">react.js</a>&nbsp;&nbsp;
+                            <a href="http://emberjs.com">ember.js</a><br />
+                            <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">typescript</a>&nbsp;
+                            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">flexbox</a><br />
+                            <a href="http://api.jquery.com/">jQuery api</a>&nbsp;&nbsp;
+                            <a href="http://jquerymobile.com/resources/">jQm</a><br />
+                            <a href="http://www.cssportal.com/css-style-editor/">CSS editor</a>&nbsp;&nbsp;
+                            <a href="https://01.org/rib/online/">phone builder</a><br />
+                            <a href="http://jqueryui.com/demos/">jQuery UI</a>&nbsp;&nbsp;
+                            <a href="http://getbootstrap.com/getting-started/">bootstrap</a><br />
+                            <a href="http://www.sinaway.com/ebook/html5_js_css_ios/">ebooks</a>
+                            <a href="http://webdesign.about.com/od/localization/l/blhtmlcodes-ascii.htm">html #</a>&nbsp;
+                            <a href="http://www.ascii.cl/htmlcodes.htm">2</a> <br />
+                            <a href="http://dev.w3.org/html5/html-author/">html5</a>&nbsp;&nbsp;
+                            <a href="http://www.quackit.com/html_5/tags/">html5 tags</a><br />
+                            <a href="http://learningwebgl.com/blog/?p=28">learn webGL</a>&nbsp;&nbsp;<br />
+                            <a href="https://trello.com/b/DaX0ylrn/development">trello</a>&nbsp;&nbsp;
+                            <a href="http://www.jquery4u.com/">jquery4u</a>&nbsp;&nbsp;
+                            <a href="http://css-tricks.com/">css-tricks</a>&nbsp;&nbsp;<br />
+                            <a href="http://www.jsdelivr.com/">free CDN</a>&nbsp;&nbsp;
+                            <a href="https://mmenujs.com/">menu</a>&nbsp;&nbsp;
+                            <a href="https://codesandbox.io/">code sand box</a>
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="http://www.gmail.com">gmail</A>&nbsp;&nbsp;
+                            <a href="https://adwords.google.com/select/snapshot">adwords</a>&nbsp;
+                            <a href="https://plus.google.com/">g+</a>&nbsp;&nbsp;
+                            <br />
+                            <a href="https://www.google.com/voice/#inbox">voice</a>&nbsp;&nbsp;
+                            <a href="http://www.google.com/bookmarks/">bookmark</a>&nbsp;&nbsp;
+                            <a href="https://www.google.com/calendar/">calendar</a>&nbsp;&nbsp;
+                            <br />
+                            <a href="https://www.google.com/analytics/">analytics</a>&nbsp;&nbsp;
+                            <a href="https://www.google.com/adsense/">adsense</a>&nbsp;&nbsp;
+                            <a href="https://www.google.com/webmasters/tools/home?hl=en">webmaster</a><br />
+                            <a href="http://www.hotmail.com">hotmail</A>&nbsp;&nbsp;
+                            <a href="https://onedrive.live.com/">OneDrive</A>&nbsp;&nbsp;
+                            <a href="http://www.youtube.com/">youtube</a>&nbsp;
+                            <a href="https://www.youtube.com/my_videos?o=U">m</a><br />
+                            <a href="http://mail.yahoo.com">mail.yahoo</A> &nbsp;
+                            <a href="https://picasaweb.google.com/home">picasaweb</A><br /> <br />
+                            <a href="https://my.ionos.com/">1and1</a>&nbsp;&nbsp;
+                            <a href="http://rss.sinaway.com/">TTR</a>&nbsp;
+                            <a href="https://www.dropbox.com/">dropbox</a>&nbsp;
+                            <a href="https://www.box.com/">box</a>&nbsp;
+                            <a href="https://app.mover.io/">mover</a>&nbsp;<br />
+                            <a href="http://sinaway.com/icecoder6/">ICECoder</a>&nbsp;&nbsp;
+                            <a href="http://cloud.flexcode.org/owncloud/">ownCloud</a>&nbsp;
+                            <a href="https://c9.io/willyci">c9.io</a>&nbsp;
+                            <a href="http://www21.adrive.com/filemanager/landing">adrive</a>&nbsp;<br />
+                            <a href="http://goqr.me/">QR code</a>&nbsp;
+                            <a href="https://www.unitag.io/qrcode">2</a>&nbsp;&nbsp;
+                            <a href="http://www.lipsum.com/feed/html">lipsum</a>&nbsp;&nbsp;
+                            <a href="http://www.phpform.org/">form builder</a>&nbsp;&nbsp;<br />
+                            <a href="http://planner.roomsketcher.com/#/?pid=493174">roomsketcher</a>&nbsp;&nbsp;
+                            <a href="http://www.floorplanner.com/">floorplanner</a>&nbsp;&nbsp;<br />
+                            <a href="http://tools.pingdom.com/">page speed testing</a>&nbsp;&nbsp;
+                            <a href="http://www.codeply.com/">codeply</a>&nbsp;&nbsp;
+                            <a href="http://www.bootply.com/">bootply</a>&nbsp;&nbsp;<br />
+                            <a href="http://jsdo.it/">jsdo</a>&nbsp;&nbsp;
+                            <a href="http://wonderfl.net/">wonderFL</a>&nbsp;&nbsp;
+                            <a href="http://bootsnipp.com/forms?version=3">bootsnipp form</a>
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="http://LogicBuy.com">LogicBuy</a>&nbsp;&nbsp;&nbsp;<br />
+                            <a href="http://www.kayak.com/">kayak airline ticket</a>&nbsp;&nbsp;&nbsp; <br /> <br />
+                            <a href="http://www.meritline.com/newsearch.aspx?page=1&amp;SortBy=Looks%20DESC&amp;SearchTerm=np1tzwjwe">meritline</a>&nbsp;&nbsp;&nbsp;
+                            <a href="http://www.woot.com/">woot</a>&nbsp;&nbsp;&nbsp;
+                            <a href="https://www.pampers.com/home">pampers</a>&nbsp;&nbsp;&nbsp;<br />
+                            <a href="https://accounts.craigslist.org/">craigslist</a>&nbsp;&nbsp;
+                            <a href="http://www.slickdeals.net/">slickdeals</a>&nbsp;&nbsp;&nbsp;
+                            <a href="https://slickdeals.net/forums/forumdisplay.php?f=54">free</a><br />
+                            <a href="http://dx.com/new-arrivals">dx</a>&nbsp;
+                            <a href="http://usd.dx.com/new">us</a>&nbsp;
+                            <a href="http://www.aliexpress.com/">aliexpress</a>&nbsp;
+                            <a href="http://www.banggood.com/new-arrivals.html">banggood</a>&nbsp;
+                            <a href="http://dynamic.focalprice.com/new-arrivals">focalprice</a>&nbsp;&nbsp;<br />
+                            <a href="http://www.tinydeal.com/products_new.html">tinydeal</a>&nbsp;&nbsp;
+                            <a href="http://www.jd.com/">京东</a>&nbsp;&nbsp;
+                            <a href="http://www.1688.com">阿里巴巴</a>&nbsp;&nbsp;
+                            <a href="http://www.gearbest.com/new-products/">gearbest</a><br />
+                            <a href="https://member.angieslist.com/">angieslist</a>
+                        </td>
+                        <td valign="top" align="left">
+                            <textarea rows="5" cols="30" id="ta"></textarea><br />
+                            <a href="http://www.hulu.com/profile/queue">hulu</a>&nbsp;&nbsp;&nbsp;
+                            <a href="http://thechive.com/">chive</a>&nbsp;&nbsp;
+                            <a href="http://facebook.com/">facebook</a>&nbsp;&nbsp;
+                            <a href="https://twitter.com/">twitter</a><br />
+                            <a href="http://dwatchseries.to/episode/the_100_s1_e1.html">tv</a>&nbsp;&nbsp;
+                            <a href="https://www.iwatchonline.ag/">2</a>&nbsp;
+                            <a href="http://33uu.com/">33uu</a>&nbsp;
+                            <a href="http://www.movie4k.to/">movie</a>&nbsp;
+                            <a href="http://viooz.ac/">2</a>&nbsp;
+                            <a href="http://www.zmovie.tw/movies/top">3</a>&nbsp;
+                            <a href="http://megashare.sc/">4</a>&nbsp;
+                            <a href="http://ividtube.info/">5</a>&nbsp;
+                            <a href="http://www.primewire.ag/">6</a>&nbsp;
+                            <a href="https://www.viewster.com/">7</a><br />
+                            <a href="http://www.animenova.org/">anime</a>&nbsp;
+                            <a href="http://www.animejoy.tv/">2</a>&nbsp;
+                            <a href="http://www.animegg.org/">3</a>&nbsp;
+                            <a href="http://www.animeram.me/">4</a>&nbsp;
+                            <a href="http://gogoanime.tv/">5</a>&nbsp;
+                            <a href="http://kissanime.com/">6</a>&nbsp;
+                            <a href="http://www.chia-anime.tv/">7</a>&nbsp;
+                            <a href="http://www.animestv.eu/">8</a>&nbsp;<br />
+                            <a href="http://www.wimp.com/">wimp</a>&nbsp;&nbsp;
+                            <a href="http://www.dump.com/">dump</a>&nbsp;&nbsp;
+                            <a href="http://www.flixxy.com/">flixxy</a>&nbsp;&nbsp;
+                            <a href="https://www.youtube2mp3.cc/#conversion">u2mp3</a>
+                            <br />
+                            <a href="" onclick="
+                        window.open('http://bensbargains.net');
+                        window.open('http://www.techeblog.com');
+                        window.open('http://www.engadget.com');
+                        window.open('http://gizmodo.com');
+                        window.open('http://news.cnet.com');
+                        window.open('http://lifehacker.com');
+                        window.open('http://failblog.org/');
+                        window.open('http://thereifixedit.com/');
+                        window.open('http://slickdeals.net/');
+                        return false;">morning cofe</a>&nbsp;&nbsp;&nbsp;
+                            <a href="" onclick="
+                        window.open('https://www.torrentbytes.net/browse.php');
+                        window.open('https://speed.cd/browse.php');
+                        window.open('https://pornbits.net/browse');
+                        window.open('http://theaudiobookbay.com/audio-books/type/sci-fi/');
+                        return false;">bt</a>
+                            <a href="https://www.bitsoup.me/browse.php">b</a>
+                            <a href="https://www.ilovetorrents.me/browse.php">i</a>
+                            <a href="https://www.torrentbytes.net/browse.php">t</a>
+                            <a href="https://speed.cd/browse.php">s</a>
+                            <a href="https://pornbits.net/browse">p</a>
+                            <a href="http://theaudiobookbay.com/audio-books/type/sci-fi/">a</a><br />
+                            <a href="https://magellan.whatbox.ca/webui">wb</a>&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://www.w3schools.com/xsl/tryxslt.asp?xmlfile=cdcatalog&amp;xsltfile=cdcatalog">xslt</a>&nbsp;&nbsp;
+                            <a href="http://www.w3schools.com/css/default.asp">css</a>&nbsp;&nbsp;
+                            <a href="http://overapi.com/">api</a>&nbsp;&nbsp;
+                            <A href='http://www.cssportal.com/'>css portal</A>&nbsp;&nbsp;
+                            <br />
+                            <a href="http://coding.smashingmagazine.com/2012/09/23/useful-javascript-libraries-jquery-plugins-web-developers/">js lib 1</a>&nbsp;&nbsp;
+                            <a href="http://coding.smashingmagazine.com/useful-javascript-libraries-jquery-plugins-part-2/">2</a>&nbsp;&nbsp;
+                            <a href="http://bonsaiden.github.com/JavaScript-Garden/#object.prototype">js garden</a>&nbsp;&nbsp;<br />
+                            <a href="http://listjs.com/">js list </a>&nbsp;&nbsp;
+                            <a href="http://shichuan.github.com/javascript-patterns/">js patterns </a>&nbsp;&nbsp;<br />
+                            <a href="http://www.jquery4u.com/">jquery4u</a>&nbsp;&nbsp;
+                            <a href="http://jsfiddle.net/">jsfiddle</a><br />
+                            <a href="http://w3layouts.com/">html5 template</a>&nbsp;&nbsp;
+                            <a href="https://01.org/rib/online/">phone builder</a><br />
+                            <a href="http://www.freshdesignweb.com/free-bootstrap-templates.html">bootstrap template</a>
+                        </td>
+                        <td>
+                            <a href="http://www.freeformatter.com/html-formatter.html">html</a>&nbsp;&nbsp;
+                            <a href="http://www.jspretty.com/">js formatter</a>&nbsp;
+                            <a href="http://www.codebeautifier.com/">css</a>&nbsp;
+                            <a href="http://fortawesome.github.io/Font-Awesome/">fortawesome</a>&nbsp;
+                            <a href="http://www.freegreatpicture.com/seamless-360-degree-panorama">360 img</a>
+                            <br />
+                            <a href="http://css3please.com/">css3plz</a>&nbsp;
+                            <a href="http://sassmeister.com/">sassMeister</a>&nbsp;
+                            <a href="https://www.google.com/fonts">g-font</a>
+                            <a href="http://codepen.io/">codepen</a>&nbsp;
+                            <a href="http://tympanus.net/codrops/">codrops</a>
+                            <br />
+                            <a href="https://www.responsinator.com/">responsinator</a>&nbsp;
+                            <a href="http://jsonlint.com/">json Validator</a>&nbsp;
+                            <a href="http://www.iconpng.com/">icon</a>
+                            <a href="https://material.io/tools/icons/?icon=cached&style=baseline"> 2</a>&nbsp;
+                            <a href="https://codesandbox.io/">sandbox</a>
+                            <br />
+                            <a href="http://www.favicomatic.com/">fav icon</a>&nbsp;
+                            <a href="http://www.fontsquirrel.com/fonts/roboto">free_font</a>&nbsp;
+                            <a href="http://www.dafont.com/">dafont</a>&nbsp;
+                            <a href="http://www.myfonts.com/WhatTheFont/">what font</a>&nbsp;
+                            <a href="http://www.identifont.com/">id font</a>&nbsp;
+                            <a href="https://developers.google.com/chart/interactive/docs/quick_start">g-Chart</a>&nbsp;<br />
+                            <a href="http://pixlr.com/editor/">image editor</a>&nbsp;
+                            <a href="http://pixlr.com/express/">lite</a>&nbsp;
+                            <a href="https://moqups.com/#!/">mockup</a>&nbsp;
+                            <a href="https://color.adobe.com/explore/newest/">theme color</a>&nbsp;
+                            <a href="http://www.colourlovers.com/palettes/most-loved/all-time/meta"> 2</a><br />
+                            <a href="http://css3generator.com/">css3 tools</a>&nbsp;
+                            <a href="http://www.colorzilla.com/gradient-editor/">gradient</a>&nbsp;
+                            <a href="https://developers.google.com/swiffy/convert/upload">swf2html5</a>&nbsp;
+
+                        </td>
+                        <td valign="top" align="left">
+                            <a href="https://gbatemp.net/forums/switch-hacking-homebrew.285/">switch news</a>&nbsp;&nbsp;&nbsp;
+                            <a href="http://goodereader.com/apps/category/playbook/">pb</a>&nbsp;&nbsp;
+                            <a href="http://www.kuaiyongbbs.com/">kuaiyongbbs</a><br />
+                            <a href="http://www.xda-developers.com/tag/nook-color/">nook</a>&nbsp;&nbsp;
+                            <a href="http://nookdevs.com/Main_Page">nookDev</a>&nbsp;&nbsp;
+                            <a href="http://forum.mobilism.org/viewforum.php?f=375">apps</a>&nbsp;&nbsp;
+                            <a href="https://apk4all.com/android/genres/racing/">apk4all</a>&nbsp;&nbsp;
+                            <a href="https://apkpure.com/">apkpure</a>&nbsp;&nbsp;
+                            <a href="http://forum.xda-developers.com/forumdisplay.php?f=860">xda nook</a>&nbsp;&nbsp;<br />
+                            <a href="http://forum.cyanogenmod.com/forum/222-barnes-noble-nook-color/">cyanogenmod</a>&nbsp;&nbsp;
+                            <a href="http://willyci.com/hsin_home.html">hsin</a>&nbsp;&nbsp;
+                            <a href="http://wall.alphacoders.com/search.php?search=galaxy">wallpaper</a>&nbsp;
+                            <a href="https://www.desktoppr.co/">1</a>&nbsp;
+                            <a href="http://www.socwall.com/wallpapers/">2</a>&nbsp;
+                            <a href="https://www.desktopnexus.com/">3</a>&nbsp;
+                            <a href="http://www.thepaperwall.com/">4</a>&nbsp;
+                            <a href="https://alpha.wallhaven.cc/latest">5</a>&nbsp;
+                            <a href="https://interfacelift.com/wallpaper/downloads/date/any/">6</a>&nbsp;<br />
+                            <a href="http://www.portalroms.com/en/isos/wii">Wii iso</a>
+                            <br />
+                            <a href="http://www.idownloadblog.com/iphone-downloads/">ios dl</a>&nbsp;&nbsp;
+                            <a href="http://www.jailbreak-me.info/">jb info</a>&nbsp;&nbsp;
+                            <a href="http://www.romzhijia.net/">Android Rom</a>&nbsp;&nbsp;
+                            <a href="http://www.needrom.com/download/chang-n8100/">THL W7</a><br />
+                            <a href="http://forum.xda-developers.com/g-flex2">XDA flex 2</a>&nbsp;&nbsp;
+                            <a href="https://forum.xda-developers.com/v20">v20</a>&nbsp;&nbsp;
+                            <a href="https://forum.xda-developers.com/tmobile-g6">G6</a>&nbsp;&nbsp;
+                            <a href="http://coolrom.com.au/">game rom</a>&nbsp;&nbsp;
+                            <a href="http://www.gamegenie.com/index.html">cheat</a>&nbsp;&nbsp;
+                        </td>
+                        <td valign="top" align="left">
+                            <a HREF="http://www.cnet.com/news/">news</a>&nbsp;&nbsp;&nbsp;
+                            <a HREF="http://www.dwnews.com/">chinese news</a>&nbsp;&nbsp;&nbsp;
+                            <a HREF="http://zzwav.com/forum-143-1.html">joke</a>&nbsp;
+                            <a HREF="http://site.6park.com/enter1/"> 2</a>&nbsp;&nbsp;&nbsp;
+                            <a HREF="http://thereifixedit.com/">fixed</a>&nbsp;&nbsp; <br />
+                            <a HREF="http://www.hackaday.com/">hackaday</a>&nbsp;&nbsp;&nbsp;
+                            <a HREF="http://consumerist.com/">consumerist</A>&nbsp;&nbsp;
+                            <a href="http://www.6park.com/us.shtml">6park</a>&nbsp;
+                            <br />
+                            <a HREF="http://www.techeblog.com/">techeblog</a>&nbsp;&nbsp;&nbsp;
+                            <a HREF="http://www.engadget.com/">engadget</a>&nbsp;&nbsp;&nbsp;
+                            <a href="http://gizmodo.com/">gizmodo</a><br />
+                            <a href="http://failblog.org/">failblog</a>&nbsp;&nbsp;
+                            <a href="http://www.lifehacker.com/">lifehacker</a>&nbsp;&nbsp;
+                            <a href="http://fark.com">fark</a>&nbsp;&nbsp;
+                            <a href="http://themoth.org/stories">moth</a><br />
+                            <a href="http://www.smashingmagazine.com/">smashingmagazine</a>&nbsp;&nbsp;&nbsp;
+                            <a href="http://net.tutsplus.com/">tutsplus</a>&nbsp;&nbsp;
+                            <a href="http://tutorialzine.com/">tutorialzine</a>&nbsp;&nbsp;<br />
+                            <a href="http://www.emanueleferonato.com/">flash game</a>&nbsp;&nbsp;
+                            <a href="http://www.thisiscolossal.com/">colossal</a>&nbsp;&nbsp;
+                            <a href="http://www.manhuadao.com">manhuadao</a>&nbsp;&nbsp;
+                            <a href="http://www.rainymood.com/">Rain</a>&nbsp;&nbsp;<br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://www.99lime.com/elements/">99lime</a>&nbsp;
+                            <a href="http://foundation.zurb.com/docs/index.html">foundation</a>&nbsp;
+                            <a href="http://getuikit.com/docs/customizer.html">uikit</a>&nbsp;<br />
+                            <a href="http://semantic-ui.com/elements/image.html">semantic-ui</a>&nbsp;<br />
+                            <a href="http://ionicframework.com/">ionic</a>&nbsp;
+                            <a href="https://creator.ionic.io/app/dashboard/projects">ionic creator</a>&nbsp;<br />
+                            <a href="https://alternativeto.net/">alternative to</a>&nbsp;
+                        </td>
+                        <td>
+                            <a href="http://www.greentoken.de/onlineconv/">3D converter</a>&nbsp;
+                            <a href="http://masc.cs.gmu.edu/wiki/ObjViewer">viewer</a>&nbsp;
+                            <a href="https://codebeautify.org/xmlviewer">xml viewer</a>
+                            <br />
+                            <a href="http://jsbeautifier.org/">js html json beautifier</a>&nbsp;
+                            <a href="https://www.w3schools.com/jquery/jquery_ref_selectors.asp">j_selector</a>&nbsp;
+                            <a href="http://jsonviewer.stack.hu/#http://profiles.umassmed.edu/ProfilesAPI/api/v1/Institution/">json viewer</a><br />
+                            <a href="https://www.draw.io/">draw.IO</a>&nbsp;
+                            <a href="http://editor.method.ac/">draw 2</a>&nbsp;
+                            <a href="http://image.online-convert.com/convert-to-svg">file convert</a>&nbsp;<br />
+                            <a href="https://aframe.io/blog/arjs/#customize-your-marker">aframe</a>&nbsp;
+                            <a href="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html">marker</a>&nbsp;
+                            <a href="http://www.i2ocr.com/">ocr</a>&nbsp;
+                            <a href="https://onlinepngtools.com/">png tool</a>&nbsp;<br />
+                            <a href="https://jaxry.github.io/panorama-to-cubemap/">pano2cube</a>&nbsp;
+                            <a href="https://pinetools.com/image-color-picker">color picker</a>&nbsp;
+                            <a href="http://javascriptcompressor.com/">js compress</a>&nbsp;
+                        </td>
+                        <td>
+                            <a href="http://www.3dtin.com/">3dtin</a>&nbsp;
+                            <a href="https://www.tinkercad.com/">tinkercad</a>&nbsp;
+                            <a href="https://www.thingiverse.com/">thingiverse</a>&nbsp;
+                            <a href="https://www.ifind3d.com/">ifind3d</a>&nbsp;
+                            <a href="https://pinshape.com/">pinshape</a>
+                            <br />
+                            <a href="https://www.turbosquid.com/Search/3D-Models/">turbosquid</a>&nbsp;
+                            <a href="https://www.cgtrader.com/free-3d-models">cgtrader</a>&nbsp;
+                            <a href="https://free3d.com/3d-models/">free3d</a>&nbsp;
+                            <a href="http://www.sweethome3d.com/freeModels.jsp">sweethome3d</a>&nbsp;<br />
+                            <a href="https://3dexport.com/free-3d-models">3dexport</a>&nbsp;
+                            <a href="https://nasa3d.arc.nasa.gov/">nasa</a>&nbsp;
+                            <a href="https://3delicious.net/">3delicious</a>&nbsp;
+                            <a href="http://www.oyonale.com/modeles.php?lang=en&format=OBJ">oyonale</a>&nbsp;
+                            <a href="http://www.dmi-3d.net/">car</a>&nbsp;<br />
+                            <a href="https://sketchfab.com/tags/free">sketchfab</a>&nbsp;
+                            <a href="https://clara.io/library">clara</a>&nbsp;
+                            <a href="https://www.turbosquid.com/Search/3D-Models/free">turbosquid</a>&nbsp;
+
+
+                            <br />
+                            <a href="http://www.openscad.org/documentation.html">openscad</a>&nbsp;
+                            <a href="https://sketchfab.com/">sketchfab</a>&nbsp;
+                            <a href="http://gcode.ws/">gcode</a>&nbsp;
+                            <a href="https://www.instructables.com/">instrucables</a>
+                            <br />
+                            <a href="http://docs.unity3d.com/ScriptReference/index.html">unity API</a>&nbsp;
+                            <a href="https://unity3d.com/learn/tutorials/topics/scripting">video</a>&nbsp;
+                            <a href="http://image.online-convert.com/convert-to-svg">to_svg</a>&nbsp;
+                            <a href="http://www.csvjson.com/csv2json">csv2json</a>
+                            <a href="http://jsonviewer.stack.hu/">format json</a>
+                        </td>
+                        <td>
+                            <script>
+                                function updateQR() {
+                                    $('#qrview').qrcode({
+                                        width: 200,
+                                        height: 200,
+                                        text: $('#qrurlinput').val()
+                                    });
+                                }
+                            </script>
+                            <input id="qrurlinput" type="text" name="url" size="50" onchange="updateQR()" placeholder="enter url here"><br />
+                            <button onclick="$('#qrview').empty(); $('#qrurlinput').val('');">
+                                clean
+                            </button>
+                            <div id="qrview"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>amazon<br />
+                            <a href="https://developer.amazon.com/">developer</a>&nbsp;
+                            <a href="https://aws.amazon.com/">aws</a>&nbsp;
+                            <a href="https://echosim.io/welcome">echosim</a>&nbsp;
+                            <a href="https://docs.sumerian.amazonaws.com/">sumerian</a><br />
+                            <a href="https://blueprints.amazon.com/">blueprints</a>
+                        </td>
+                        <td>azure<br />
+                            <a href="https://portal.azure.com">azure</a>&nbsp;
+                            <a href="https://www.luis.ai/home">Luis</a>&nbsp;
+                            <a href="https://my.knowledge.store/workspace/umassmed_profiles/botframework/umassmed_profiles.findprofc/overview">store</a>&nbsp;
+                            <a href="https://channel9.msdn.com/">channel9</a>&nbsp;<br />
+                            <a href="https://customvision.ai/">vision</a>&nbsp;
+                            <a href="https://github.com/willyci/botFindProfessorC">github</a>&nbsp;
+                            <a href="https://lensstudio.snapchat.com/support/">snapchat</a>&nbsp;
+                        </td>
+                        <td>
+                            <a href="http://www.beestar.org/">beestar</a>&nbsp;
+                            <a href="http://www.math-aids.com/cgi/pdf_viewer_1.cgi?script_name=add_5min.pl&A1_2=1&A1_3=1&A1_4=1&A1_5=1&A1_6=1&A1_7=1&A1_8=1&A1_9=1&A1_10=1&A1_11=1&A1_12=1&A1_13=1&A1_14=1&A1_15=1&A1_16=1&A1_17=1&A1_18=1&A1_19=1&A1_20=1&A2_2=1&A2_3=1&A2_4=1&A2_5=1&A2_6=1&A2_7=1&A2_8=1&A2_9=1&A2_10=1&A2_11=1&A2_12=1&A2_13=1&A2_14=1&A2_15=1&A2_16=1&A2_17=1&A2_18=1&A2_19=1&A2_20=1&probs=100&language=0&memo=&x=148&y=22">+</a>&nbsp;
+                            <a href="http://www.math-aids.com/cgi/pdf_viewer_9.cgi?script_name=sub_5min.pl&A1_2=1&A1_3=1&A1_4=1&A1_5=1&A1_6=1&A1_7=1&A1_8=1&A1_9=1&A1_10=1&A1_11=1&A1_12=1&A1_13=1&A1_14=1&A1_15=1&A1_16=1&A1_17=1&A1_18=1&A1_19=1&A1_20=1&A2_1=1&A2_2=1&A2_3=1&A2_4=1&A2_5=1&A2_6=1&A2_7=1&A2_8=1&A2_9=1&A2_10=1&A2_11=1&A2_12=1&A2_13=1&A2_14=1&A2_15=1&A2_16=1&A2_17=1&A2_18=1&A2_19=1&A2_20=1&probs=100&language=0&memo=&x=168&y=24">-</a>&nbsp;
+                            <a href="http://www.math-aids.com/cgi/pdf_viewer_2.cgi?script_name=div_single_horiz.pl&A1_2=1&A1_3=1&A1_4=1&A1_5=1&A1_6=1&A1_7=1&A1_8=1&A1_9=1&A1_10=1&A2_2=1&A2_3=1&A2_4=1&A2_5=1&A2_6=1&A2_7=1&A2_8=1&A2_9=1&A2_10=1&layout=3&probs=40&language=0&memo=&x=163&y=19">/</a>&nbsp;&nbsp;
+                            <a href="http://www.math-aids.com/cgi/pdf_viewer_6.cgi?script_name=multi_times_table_advanced.pl&A34=1&A50=1&A66=1&A82=1&A98=1&A114=1&A130=1&A146=1&A162=1&A178=1&A35=1&A51=1&A67=1&A83=1&A99=1&A115=1&A131=1&A147=1&A163=1&A179=1&A36=1&A52=1&A84=1&A100=1&A116=1&A132=1&A148=1&A164=1&A180=1&A37=1&A53=1&A69=1&A85=1&A101=1&A117=1&A133=1&A149=1&A165=1&A181=1&A38=1&A54=1&A70=1&A86=1&A102=1&A118=1&A134=1&A150=1&A166=1&A182=1&A39=1&A55=1&A71=1&A87=1&A103=1&A119=1&A135=1&A151=1&A167=1&A183=1&A40=1&A56=1&A72=1&A88=1&A104=1&A120=1&A136=1&A152=1&A168=1&A184=1&A41=1&A57=1&A73=1&A89=1&A105=1&A121=1&A137=1&A153=1&A169=1&A185=1&A42=1&A58=1&A74=1&A90=1&A106=1&A122=1&A138=1&A154=1&A170=1&A186=1&A43=1&A59=1&A75=1&A91=1&A107=1&A123=1&A139=1&A155=1&A171=1&A187=1&probs=100&cprobs=80&cmin=2&language=0&memo=&x=129&y=24">*</a>&nbsp;
+                            <a href="http://www.math-aids.com/Multiplication/">math</a>&nbsp;
+                            <a href="https://www.wolframalpha.com/">wolfram</a><br />
+                            <a href="https://connected.mcgraw-hill.com/connected/pictorialLoginClass.do?code=7d1f3">Everyday Math</a>&nbsp;
+                            <a href="https://sites.google.com/a/doversherborn.org/mackay/useful-websites">links</a>&nbsp;&nbsp;
+                            <a href="https://wav.hya.io/#/fx">edit music</a>&nbsp;&nbsp;<a href="https://mp3cut.net/">2</a><br />
+                            <a href="https://www.math-aids.com/cgi/pdf_viewer_1.cgi?script_name=add_single.pl&A1_0=1&A1_1=1&A1_2=1&A1_3=1&A1_4=1&A1_5=1&A1_6=1&A1_7=1&A1_8=1&A1_9=1&A2_0=1&A2_1=1&A2_2=1&A2_3=1&A2_4=1&A2_5=1&A2_6=1&A2_7=1&A2_8=1&A2_9=1&probs=30&language=0&memo=&x=137&y=23">+</a>&nbsp;
+                            <a href="https://www.math-aids.com/cgi/pdf_viewer_1.cgi?script_name=sub_single.pl&A1_0=1&A1_1=1&A1_2=1&A1_3=1&A1_4=1&A1_5=1&A1_6=1&A1_7=1&A1_8=1&A1_9=1&A2_0=1&A2_1=1&A2_2=1&A2_3=1&A2_4=1&A2_5=1&A2_6=1&A2_7=1&A2_8=1&A2_9=1&probs=30&language=0&memo=&x=137&y=23">-</a>
+
+                        </td>
+                        <td>
+                            <a href="https://console.bluemix.net/catalog/?category=watson">ibm watson</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Win MR</br>
+                            <a href="https://developer.microsoft.com/en-us/windows/mixed-reality">doc</a>&nbsp;
+                            <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity">code</a>&nbsp;
+                            <a href="https://www.youtube.com/watch?v=zSlUipiPCBY">video</a>&nbsp;
+                            <a href="https://www.youtube.com/watch?v=-izd669cfbw&list=PLW1wIkGok4VWnVw8fLzS2GnrbC1wudqfM">my videos</a>&nbsp;
+                            <br />forums&nbsp;
+                            <a href="https://forums.hololens.com/categories/Discussion">ms</a>&nbsp;
+                            <a href="https://forum.unity.com/forums/windows-mixed-reality.102/">unity</a>&nbsp;
+                            <a href="https://www.reddit.com/r/WindowsMR/search?q=boundry&restrict_sr=1">reddit</a>&nbsp;
+                        </td>
+                        <td>WebVR<br />
+                            <a href="https://www.babylonjs.com/">babylon</a>&nbsp;
+                            <a href="https://threejs.org/">3js</a>&nbsp;
+                            <a href="https://docs.microsoft.com/en-us/windows/uwp/get-started/adding-webvr-to-a-babylonjs-game">ms</a>&nbsp;
+                            <a href="https://developer.oculus.com/documentation/oculus-browser/latest/concepts/browser-intro/">oculus browser</a>
+
+                        </td>
+                        <td>
+                            <a href="https://www.piloteers.org/forums/114-2016-third-generation-pilot/157665-permanently-disable-auto-stop-start-5.html">pilot</a>&nbsp;
+                            <a href="https://www.linkedin.com/in/willyci/">Li</a>&nbsp;
+                            <a href="https://www.FlexCode.org/">FC</a>&nbsp;
+                            <a href="https://Resume.WillyCi.com/">RW</a>
+                            <a href=""></a>&nbsp;
+                            <a href=""></a>&nbsp;
+                        </td>
+                        <td>
+                            <a href="https://www.shadertoy.com/">ShaderToy</a>&nbsp;
+                            <a href="https://shaderfrog.com/app/">shaderfrog</a>&nbsp;
+                            <a href="http://developer.download.nvidia.com/cg/index_stdlib.html">CG library</a>
+
+                            <a href=""></a>&nbsp;
+                            <a href=""></a>&nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+        <div class="tabbertab">
+            <h2>old links</h2>
+            <p>
+                <a href="http://livedocs.macromedia.com/flex/3/langref/runtimeErrors.html">Run Time Errors</a>&nbsp;
+                <a href="http://livedocs.macromedia.com/flex/3/langref/compilerErrors.html">compiler</a>&nbsp;
+                <a href="http://livedocs.macromedia.com/flex/3/langref/compilerWarnings.html">Warning</a><br />
+                flexcoders email search
+                <form action="http://www.mail-archive.com/search" method="get">
+                    <input type="hidden" name="l" value="flexcoders@yahoogroups.com" />
+                    <input type="text" name="q" value="" size="25" /> <input type="submit" value="Search" />
+                </form>
+                <a href="http://www.buildingwebapps.com/learningrails">RoR podcast</a><br />
+                <a href="http://www.meshplex.org/wiki/Ruby/Ruby_on_Rails_programming_tutorials">RoR tutorials</a><br />
+                <a href="http://www.digitalmediaminute.com/article/1816/top-ruby-on-rails-tutorials">top 12 tutorials site</a><br />
+                <a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/index.html">Programming Ruby book</a><br /><br />
+                <a href="http://api.rubyonrails.org/">rails api</a><br />
+                <a href="http://stdlib.rubyonrails.org/">Ruby Library Doc</a><br />
+                <a href="http://corelib.rubyonrails.org/">ruby core</a><br />
+                <a href="http://mongrel.rubyforge.org/web/mongrel/files/README.html">mongrel doc</a>
+                <a href="http://www.java2s.com/Code/Ruby/CatalogRuby.htm">Ruby doc</a>
+                <a href="http://www.computerhope.com/unix/overview.htm">unix command</a>&nbsp;&nbsp;&nbsp;
+                <a href="http://www.rt.com/man/">unix man page</a><br />
+                <a href="http://www.postgresql.org/docs/8.2/static/reference.html">psql command</a>&nbsp;
+                <a href="http://www.digipedia.pl/pgsql/81/">psql 2</a>&nbsp;&nbsp;
+                <a href="http://www.w3schools.com/tags/">html tags</a><br />
+                <a href="http://www.ss64.com/osx/index.html"> OSX command</a>&nbsp;&nbsp;&nbsp;
+                <a href="http://gskinner.com/RegExr/">RegExr</a><br />
+                <a href="http://cflex.net/">cflex.net</a>&nbsp;
+                <a href="http://www.actionscript.com">actionscript.com</a><br />
+                <a href="http://www.actionscript.org">actionscript.org</a><br />
+                <a href="http://groups.yahoo.com/group/Flash_ActionScript/">ActionScript yahoo group/</a><br />
+                <a href="http://groups.yahoo.com/group/flexcoders/">flex coder yahoo group</a><br />
+                <a href="http://www.everythingflex.com/">everythingflex</a><br />
+                <a href="http://www.senocular.com/flash/actionscript.php">ActionScript Library</a>&nbsp;
+                <a href="http://flexbox.mrinalwadhwa.com/">flex box</a><br />
+                <a href="http://onflex.org">onflex.org</a>&nbsp;
+                <a href="http://www.apollohunter.com/">apollohunter</a><br />
+                <a href="http://www.airapps.net/">airapps.net</a>&nbsp;
+                <a href="http://www.flashmobilegroup.org/">flashmobilegroup.org/</a><br />
+                <a href="http://www.adobe.com/designcenter/video_workshop/">adobe video work shop</a><br />
+                <a HREF="http://www.adobe.com/support/flash/action_scripts/actionscript_dictionary/" TITLE="actionscript_dictionary">actionscript_dictionary</A><br />
+                <a href="http://www.adobe.com/devnet/flex/videotraining/flex4beta/index.html">learn flex in a week</a><br />
+                <a href="http://www.flexcode.org/Flex3StyleExplorer.swf">flex 3.0 style explorer</a><br />
+                <a href="http://livedocs.adobe.com/flex/3/langref/">flex 3.0 Language Reference</a><br />
+                <a href="http://livedocs.adobe.com/flex/3/html/index.html">flex 3.0 live doc</a><br />
+                <a href="http://www.loscavio.com/downloads/blog/flex3_css_list/flex3_css_list.htm">flex 3.0 style doc</a><br />
+                <a href="http://livedocs.macromedia.com/specs/actionscript/3/wwhelp/wwhimpl/js/html/wwhelp.htm?href=as3_specification.html">ActionScript 3 live doc</a><br />
+                <a href="http://livedocs.adobe.com/labs/air/1/devappsflex/help.html">adobe AIR online doc</a><br />
+                <a href="http://papervision3d.googlecode.com/svn/trunk/as3/trunk/docs/index.html">PV3D doc</a><br /><br />
+                <a href="http://docs.huihoo.com/flex/4/">flex4 api</a>&nbsp;
+                <a href="http://help.adobe.com/en_US/Flex/4.0/UsingSDK/index.html">flex4 doc</a>&nbsp;
+                <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html?filter_flex=4">AS3</a>&nbsp;
+                <a href="http://www.adobe.com/devnet/flex/tourdeflex/web/#">flex4 explorer</a>&nbsp;
+                <br /><br />
+                <a href="http://www.adobe.com/cfusion/communityengine/index.cfm?event=homepage&amp;productId=2">adobe cookbook</a><br />
+                <a HREF="http://blog.flexexamples.com/">flexexamples</A>&nbsp;
+                <A HREF="http://blog.flexexamples.com/about-you/"> f_v</A>&nbsp;
+                <A href="http://www.flexcode.org/screen_test/">screen test</A>
+                <br />
+                <A HREF="http://flex.org">flex.org</a><br />
+                <A HREF="http://www.adobe.com/support/flashplayer/downloads.html">download flash player</a><br />
+                <A HREF="http://forums.adobe.com/community/flex/flex_general_discussion">adobe flex forums</a><br />
+            </p>
+        </div>
+        <div class="tabbertab">
+            <h2>jQuery Selector</h2>
+            <p>
+                nothing to see here, keep moving!
+            </p>
+            <p>
+                <form name="search" method="get" action="http://www.ebay.com/sch/i.html">
+                    Search ebay
+                    <input type="text" name="_nkw" size="7">
+                    <input type="submit" value="Go" width="20" height="16" border="0">
+                </form>
+            </p><br />
+            <p>
+                <form action="http://www.amazon.com/s/" method="get" name="search" target="_top">
+                    Search Amazon
+                    <input id="field-keywords" name="field-keywords" type="text" size="8">
+                    <input type="hidden" name="tag" value="flexcodeorg-20">
+                    <input type="hidden" name="link_code" value="wsw">
+                    <input type="hidden" name="_encoding" value="UTF-8">
+                    <input type="hidden" name="search-alias" value="aps">
+                    <input type="submit" value="Go" width="20" height="16" border="0">
+                </form>
+            </p>
+            <div>
+                <a href="https://www.w3schools.com/jquery/jquery_ref_selectors.asp">jQuery Selector</a>
+                <table>
+                    <tr>
+                        <th style="width:20%">Selector</th>
+                        <th style="width:25%">Example</th>
+                        <th>Selects</th>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_all.asp">*</a></td>
+                        <td>$(&quot;*&quot;)</td>
+                        <td>All elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_id.asp">#<em>id</em></a></td>
+                        <td>$(&quot;#lastname&quot;)</td>
+                        <td>The element with id="lastname"</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_class.asp">.<em>class</em></a></td>
+                        <td>$(&quot;.intro&quot;)</td>
+                        <td>All elements with class=&quot;intro&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_multiple_classes.asp">.<em>class,</em>.<em>class</em></a></td>
+                        <td>$(&quot;.intro,.demo&quot;)</td>
+                        <td>All elements with the class &quot;intro&quot; or &quot;demo&quot;</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="sel_element.asp"><em>element</em></a></td>
+                        <td>$(&quot;p&quot;)</td>
+                        <td>All &lt;p&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_multiple_sel.asp"><em>el1</em>,<em>el2</em>,<em>el3</em></a></td>
+                        <td>$(&quot;h1,div,p&quot;)</td>
+                        <td>All &lt;h1&gt;, &lt;div&gt; and &lt;p&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_first.asp">:first</a></td>
+                        <td>$(&quot;p:first&quot;)</td>
+                        <td>The first &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_last.asp">:last</a></td>
+                        <td>$(&quot;p:last&quot;)</td>
+                        <td>The last &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_even.asp">:even</a></td>
+                        <td>$(&quot;tr:even&quot;)</td>
+                        <td>All even &lt;tr&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_odd.asp">:odd</a></td>
+                        <td>$(&quot;tr:odd&quot;)</td>
+                        <td>All odd &lt;tr&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_firstchild.asp">:first-child</a></td>
+                        <td>$(&quot;p:first-child&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the first child of their parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_firstoftype.asp">:first-of-type</a></td>
+                        <td>$(&quot;p:first-of-type&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the first &lt;p&gt; element of their parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_lastchild.asp">:last-child</a></td>
+                        <td>$(&quot;p:last-child&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the last child of their parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_lastoftype.asp">:last-of-type</a></td>
+                        <td>$(&quot;p:last-of-type&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the last &lt;p&gt; element of their parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_nthchild.asp">:nth-child(<em>n</em>)</a></td>
+                        <td>$(&quot;p:nth-child(2)&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the 2nd child of their parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_nthlastchild.asp">:nth-last-child(<em>n</em>)</a></td>
+                        <td>$(&quot;p:nth-last-child(2)&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the 2nd child of their parent, counting from the
+                            last child</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_nthoftype.asp">:nth-of-type(<em>n</em>)</a></td>
+                        <td>$(&quot;p:nth-of-type(2)&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the 2nd &lt;p&gt; element of their parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_nthlastoftype.asp">:nth-last-of-type(<em>n</em>)</a></td>
+                        <td>$(&quot;p:nth-last-of-type(2)&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the 2nd &lt;p&gt; element of their parent, counting from the
+                            last child</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_onlychild.asp">:only-child</a></td>
+                        <td>$(&quot;p:only-child&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the only child of their parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_onlyoftype.asp">:only-of-type</a></td>
+                        <td>$(&quot;p:only-of-type&quot;)</td>
+                        <td>All &lt;p&gt; elements that are the only child, of its type, of their parent</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_parent_child.asp">parent &gt; child</a></td>
+                        <td>$(&quot;div &gt; p&quot;)</td>
+                        <td>All &lt;p&gt; elements that are a direct child of a &lt;div&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_parent_descendant.asp">parent descendant</a></td>
+                        <td>$(&quot;div p&quot;)</td>
+                        <td>All &lt;p&gt; elements that are descendants of a &lt;div&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_previous_next.asp">element + next</a></td>
+                        <td>$(&quot;div + p&quot;)</td>
+                        <td>The &lt;p&gt; element that are next to each &lt;div&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_previous_siblings.asp">element ~ siblings</a></td>
+                        <td>$(&quot;div ~ p&quot;)</td>
+                        <td>All &lt;p&gt; elements that are siblings of a &lt;div&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_eq.asp">:eq(<em>index</em>)</a></td>
+                        <td>$(&quot;ul li:eq(3)&quot;)</td>
+                        <td>The fourth element in a list (index starts at 0)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_gt.asp">:gt(<em>no</em>)</a></td>
+                        <td>$(&quot;ul li:gt(3)&quot;)</td>
+                        <td>List elements with an index greater than 3</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_lt.asp">:lt(<em>no</em>)</a></td>
+                        <td>$(&quot;ul li:lt(3)&quot;)</td>
+                        <td>List elements with an index less than 3</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_not.asp">:not(<em>selector</em>)</a></td>
+                        <td>$(&quot;input:not(:empty)&quot;)</td>
+                        <td>All input elements that are not empty</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_header.asp">:header</a></td>
+                        <td>$(&quot;:header&quot;)</td>
+                        <td>All header elements &lt;h1&gt;, &lt;h2&gt; ...</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_animated.asp">:animated</a></td>
+                        <td>$(&quot;:animated&quot;)</td>
+                        <td>All animated elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_focus.asp">:focus</a></td>
+                        <td>$(&quot;:focus&quot;)</td>
+                        <td>The element that currently has focus</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_contains.asp">:contains(<em>text</em>)</a></td>
+                        <td>$(&quot;:contains('Hello')&quot;)</td>
+                        <td>All elements which contains the text &quot;Hello&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_has.asp">:has(<em>selector</em>)</a></td>
+                        <td>$(&quot;div:has(p)&quot;)</td>
+                        <td>All &lt;div&gt; elements that have a &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_empty.asp">:empty</a></td>
+                        <td>$(&quot;:empty&quot;)</td>
+                        <td>All elements that are empty</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_parent.asp">:parent</a></td>
+                        <td>$(&quot;:parent&quot;)</td>
+                        <td>All elements that are a parent of another element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_hidden.asp">:hidden</a></td>
+                        <td>$(&quot;p:hidden&quot;)</td>
+                        <td>All hidden &lt;p&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_visible.asp">:visible</a></td>
+                        <td>$(&quot;table:visible&quot;)</td>
+                        <td>All visible tables</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_root.asp">:root</a></td>
+                        <td>$(&quot;:root&quot;)</td>
+                        <td>The document's root element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_lang.asp">:lang(<em>language</em>)</a></td>
+                        <td>$(&quot;p:lang(de)&quot;)</td>
+                        <td>All &lt;p&gt; elements with a lang attribute value starting with &quot;de&quot;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute.asp">[<em>attribute</em>]</a></td>
+                        <td>$(&quot;[href]&quot;)</td>
+                        <td>All elements with a href attribute</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_equal_value.asp">[<em>attribute</em>=<em>value</em>]</a></td>
+                        <td>$(&quot;[href='default.htm']&quot;)</td>
+                        <td>All elements with a href attribute value equal to &quot;default.htm&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_notequal_value.asp">[<em>attribute</em>!=<em>value</em>]</a></td>
+                        <td>$(&quot;[href!='default.htm']&quot;)</td>
+                        <td>All elements with a href attribute value not equal to &quot;default.htm&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_end_value.asp">[<em>attribute</em>$=<em>value</em>]</a></td>
+                        <td>$(&quot;[href$='.jpg']&quot;)</td>
+                        <td>All elements with a href attribute value ending with &quot;.jpg&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_prefix_value.asp">[<i>attribute</i>|=<i>value</i>]</a></td>
+                        <td>$(&quot;[title|='Tomorrow']&quot;)</td>
+                        <td>All elements with a title attribute value equal to 'Tomorrow', or starting
+                            with 'Tomorrow' followed by a hyphen</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_beginning_value.asp">[<i>attribute</i>^=<i>value</i>]</a></td>
+                        <td>$(&quot;[title^='Tom']&quot;)</td>
+                        <td>All elements with a title attribute value starting with &quot;Tom&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_contains_value.asp">[<i>attribute</i>~=<i>value</i>]</a></td>
+                        <td>$(&quot;[title~='hello']&quot;)</td>
+                        <td>All elements with a title attribute value containing the specific word &quot;hello&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_contains_string_value.asp">[<i>attribute*</i>=<i>value</i>]</a></td>
+                        <td>$(&quot;[title*='hello']&quot;)</td>
+                        <td>All elements with a title attribute value containing the word &quot;hello&quot;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input.asp">:input</a></td>
+                        <td>$(&quot;:input&quot;)</td>
+                        <td>All input elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_text.asp">:text</a></td>
+                        <td>$(&quot;:text&quot;)</td>
+                        <td>All input elements with type=&quot;text&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_password.asp">:password</a></td>
+                        <td>$(&quot;:password&quot;)</td>
+                        <td>All input elements with type=&quot;password&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_radio.asp">:radio</a></td>
+                        <td>$(&quot;:radio&quot;)</td>
+                        <td>All input elements with type=&quot;radio&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_checkbox.asp">:checkbox</a></td>
+                        <td>$(&quot;:checkbox&quot;)</td>
+                        <td>All input elements with type=&quot;checkbox&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_submit.asp">:submit</a></td>
+                        <td>$(&quot;:submit&quot;)</td>
+                        <td>All input elements with type=&quot;submit&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_reset.asp">:reset</a></td>
+                        <td>$(&quot;:reset&quot;)</td>
+                        <td>All input elements with type=&quot;reset&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_button.asp">:button</a></td>
+                        <td>$(&quot;:button&quot;)</td>
+                        <td>All input elements with type=&quot;button&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_image.asp">:image</a></td>
+                        <td>$(&quot;:image&quot;)</td>
+                        <td>All input elements with type=&quot;image&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_file.asp">:file</a></td>
+                        <td>$(&quot;:file&quot;)</td>
+                        <td>All input elements with type=&quot;file&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_enabled.asp">:enabled</a></td>
+                        <td>$(&quot;:enabled&quot;)</td>
+                        <td>All enabled input elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_disabled.asp">:disabled</a></td>
+                        <td>$(&quot;:disabled&quot;)</td>
+                        <td>All disabled input elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_selected.asp">:selected</a></td>
+                        <td>$(&quot;:selected&quot;)</td>
+                        <td>All selected input elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_input_checked.asp">:checked</a></td>
+                        <td>$(&quot;:checked&quot;)</td>
+                        <td>All checked input elements</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div class="tabbertab">
+            <DL>
+                <p>
+                    <DT>
+                        <H3 FOLDED ADD_DATE="1302184804">Links</H3>
+                        <DL>
+
+                            <a href="https://www.youtube.com/watch?v=xzsavC0LRPw&vq=hd2160">Short of Breath</a>&nbsp;&nbsp;
+                            <a href="https://www.youtube.com/watch?v=T4ScfUYA9Ug&vq=hd2160">Trauma Simulation</a><br /><br />
+
+                            <a href="https://www.quixel.com">https://www.quixel.com</a><br />
+                            <a href="https://www.free3d.com">https://www.free3d.com</a><br />
+                            <a href="https://www.cadnav.com">https://www.cadnav.com</a><br />
+                            <a href="https://www.mixamo.com">https://www.mixamo.com</a><br />
+                            <a href="https://www.scifi3d.com">https://www.scifi3d.com</a><br />
+                            <a href="https://www.blankrepository.com">https://www.blankrepository.com</a><br />
+                            <a href="https://www.poliigon.com">https://www.poliigon.com</a><br />
+                            <a href="https://www.evermotion.org">https://www.evermotion.org</a><br />
+                            <a href="https://www.turbosquid.com">https://www.turbosquid.com</a><br />
+                            <a href="https://www.unrealengine.com/marketplace">https://www.unrealengine.com/marketplace</a><br />
+                            <a href="https://www.cgtrader.com">https://www.cgtrader.com</a><br />
+                            <a href="https://www.textures.com">https://www.textures.com</a><br />
+                            <a href="https://www.artec3d.com">https://www.artec3d.com</a><br />
+                            <a href="https://www.sketchfab.com">https://www.sketchfab.com</a><br />
+                            <a href="https://www.theterraindomain.com">https://www.theterraindomain.com</a><br />
+                            <a href="https://www.hdrihaven.com">https://www.hdrihaven.com</a><br />
+                            <a href="https://www.texturehaven.com">https://www.texturehaven.com</a><br />
+                            <a href="https://www.threedscans.com">https://www.threedscans.com</a><br />
+                            <a href="https://archive3d.net ">https://archive3d.net </a><br />
+                            <a href="https://share.allegorithmic.com ">https://share.allegorithmic.com </a><br />
+                            <a href="https://www.imeshh.com/shop">https://www.imeshh.com/shop</a><br />
+                            <a href="https://www.cc0textures.com">https://www.cc0textures.com</a><br />
+                            <a href="https://3dsky.org/">https://3dsky.org/</a><br />
+                            <a href="https://grabcad.com/library">https://grabcad.com/library</a><br /><br /><br />
+
+                            <a href="https://itch.io/search?q=Oculus+Quest">itch quest game</a><br />
+                            <a href=""></a><br />
+                            <a href="https://stephaneginier.com/sculptgl">sculptGL</a><br />
+                            <a href="http://www.wings3d.com/">wings3d</a><br />
+                            <a href="https://www.daz3d.com/technology/">Daz Studio</a><br />
+                            <a href="https://clara.io/">clara</a><br />
+                            <a href="http://pixologic.com/sculptris/">Sculptris</a><br />
+                            <a href="https://www.bforartists.de/">Bforartists</a><br />
+                            <a href="https://planetside.co.uk/free-downloads/terragen-4-free-download/">Terragen</a><br />
+
+
+
+
+                            <!--
+                      <a href="https://www.linkedin.com/in/willyci/">Llinkedin</a>&nbsp;<br/>
+                        <a href="https://www.FlexCode.org/">flexcode Portfolio</a>&nbsp;<br/>
+                        <a href="https://Resume.WillyCi.com/">resume</a><br/>
+                      <a href="https://youtu.be/-izd669cfbw">youtube</a><br/>
+                      Thanks for reaching out, <br/>
+I am looking Sr. Front End Software Engineer position.<br/>
+Here are a few links to my updated resume, portfolio, and youtube channel.<br/>
+resume https://resume.willyci.com/<br/>
+Portfolio https://flexcode.org/ <br/>
+YouTube https://youtu.be/-izd669cfbw AR/VR/MR projects<br/>
+Linkedin https://www.linkedin.com/in/willyci/<br/>
+-->
+                        </DL>
+                        <p>
+        </div>
+
+        <div class="tabbertab">
+            <div class="w3-responsive">
+                <h2>
+                    css selector
+                </h2>
+                <p>
+                    css selector
+                </p>
+                <table class="w3-table-all notranslate">
+                    <tr>
+                        <th style="width:20%">Selector</th>
+                        <th style="width:20%">Example</th>
+                        <th>Example description</th>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_class.asp">.<i>class</i></a></td>
+                        <td class="notranslate">.intro</td>
+                        <td>Selects all elements with class=&quot;intro&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><em>.class1.class2</em></td>
+                        <td class="notranslate">.name1.name2</td>
+                        <td>Selects all elements with both <em>name1</em> and <em>name2</em> set
+                            within its class attribute</td>
+                    </tr>
+                    <tr>
+                        <td><em>.class1 .class2</em></td>
+                        <td class="notranslate">.name1 .name2</td>
+                        <td>Selects all elements with <em>name2</em> that is a descendant of an
+                            element with <em>name1</em></td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_id.asp">#<i>id</i></a></td>
+                        <td class="notranslate">#firstname</td>
+                        <td>Selects the element with id=&quot;firstname&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_all.asp">*</a></td>
+                        <td class="notranslate">*</td>
+                        <td>Selects all elements</td>
+                    </tr>
+                    <tr>
+                        <td><i><a href="sel_element.asp">element</a></i></td>
+                        <td class="notranslate">p</td>
+                        <td>Selects all &lt;p&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td><i><a href="sel_element_class.asp">element.class</a></i></td>
+                        <td class="notranslate">p.intro</td>
+                        <td>Selects all &lt;p&gt; elements with class=&quot;intro&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><i><a href="sel_element_comma.asp">element,element</a></i></td>
+                        <td class="notranslate">div, p</td>
+                        <td>Selects all &lt;div&gt; elements and all &lt;p&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_element_element.asp"><i>element</i> <i>element</i></a></td>
+                        <td class="notranslate">div p</td>
+                        <td>Selects all &lt;p&gt; elements inside &lt;div&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_element_gt.asp"><i>element</i>&gt;<i>element</i></a></td>
+                        <td class="notranslate">div &gt; p</td>
+                        <td>Selects all &lt;p&gt; elements where the parent is a &lt;div&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_element_pluss.asp"><i>element</i>+<i>element</i></a></td>
+                        <td class="notranslate">div + p</td>
+                        <td>Selects all &lt;p&gt; elements that are placed immediately after &lt;div&gt; elements</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_gen_sibling.asp"><i>element1</i>~<i>element2</i></a></td>
+                        <td>p ~ ul</td>
+                        <td>Selects every &lt;ul&gt; element that are preceded by a &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute.asp">[<i>attribute</i>]</a></td>
+                        <td class="notranslate">[target]</td>
+                        <td>Selects all elements with a target attribute</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_value.asp">[<i>attribute</i>=<i>value</i>]</a></td>
+                        <td class="notranslate">[target=_blank]</td>
+                        <td>Selects all elements with target=&quot;_blank&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_value_contains.asp">[<i>attribute</i>~=<i>value</i>]</a></td>
+                        <td class="notranslate">[title~=flower]</td>
+                        <td>Selects all elements with a title attribute containing the word &quot;flower&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attribute_value_lang.asp">[<i>attribute</i>|=<i>value</i>]</a></td>
+                        <td class="notranslate">[lang|=en]</td>
+                        <td>Selects all elements with a lang attribute value starting with &quot;en&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attr_begin.asp">[<i>attribute</i>^=<i>value</i>]</a></td>
+                        <td>a[href^=&quot;https&quot;]</td>
+                        <td>Selects every &lt;a&gt; element whose href attribute value begins with &quot;https&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attr_end.asp">[<i>attribute</i>$=<i>value</i>]</a></td>
+                        <td>a[href$=&quot;.pdf&quot;]</td>
+                        <td>Selects every &lt;a&gt; element whose href attribute value ends with &quot;.pdf&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_attr_contain.asp">[<i>attribute</i>*=<i>value</i>]</a></td>
+                        <td>a[href*=&quot;w3schools&quot;]</td>
+                        <td>Selects every &lt;a&gt; element whose href attribute value contains the substring &quot;w3schools&quot;</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_active.asp">:active</a></td>
+                        <td class="notranslate">a:active</td>
+                        <td>Selects the active link</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_after.asp">::after</a></td>
+                        <td class="notranslate">p::after</td>
+                        <td>Insert something after the content of each &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_before.asp">::before</a></td>
+                        <td class="notranslate">p::before</td>
+                        <td>Insert something before&nbsp;the content of each &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_checked.asp">:checked</a></td>
+                        <td>input:checked</td>
+                        <td>Selects every checked &lt;input&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_default.asp">:default</a></td>
+                        <td>input:default</td>
+                        <td>Selects the default &lt;input&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_disabled.asp">:disabled</a></td>
+                        <td>input:disabled</td>
+                        <td>Selects every disabled &lt;input&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_empty.asp">:empty</a></td>
+                        <td>p:empty</td>
+                        <td>Selects every &lt;p&gt; element that has no children (including text nodes)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_enabled.asp">:enabled</a></td>
+                        <td>input:enabled</td>
+                        <td>Selects every enabled &lt;input&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_firstchild.asp">:first-child</a></td>
+                        <td class="notranslate">p:first-child</td>
+                        <td>Selects every &lt;p&gt; element that is the first child of its parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_firstletter.asp">::first-letter</a></td>
+                        <td class="notranslate">p::first-letter</td>
+                        <td>Selects the first letter of every &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_firstline.asp">::first-line</a></td>
+                        <td class="notranslate">p::first-line</td>
+                        <td>Selects the first line of every &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_first-of-type.asp">:first-of-type</a></td>
+                        <td>p:first-of-type</td>
+                        <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_focus.asp">:focus</a></td>
+                        <td class="notranslate">input:focus</td>
+                        <td>Selects the input element which has focus</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_hover.asp">:hover</a></td>
+                        <td class="notranslate">a:hover</td>
+                        <td>Selects links on mouse over</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_in-range.asp">:in-range</a></td>
+                        <td class="notranslate">input:in-range</td>
+                        <td>Selects input elements with a value within a specified range</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_indeterminate.asp">:indeterminate</a></td>
+                        <td class="notranslate">input:indeterminate</td>
+                        <td>Selects input elements that are in an indeterminate state</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_invalid.asp">:invalid</a></td>
+                        <td class="notranslate">input:invalid</td>
+                        <td>Selects all input elements with an invalid value</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_lang.asp">:lang(<i>language</i>)</a></td>
+                        <td class="notranslate">p:lang(it)</td>
+                        <td>Selects every &lt;p&gt; element with a lang attribute equal to &quot;it&quot; (Italian)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_last-child.asp">:last-child</a></td>
+                        <td>p:last-child</td>
+                        <td>Selects every &lt;p&gt; element that is the last child of its parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_last-of-type.asp">:last-of-type</a></td>
+                        <td>p:last-of-type</td>
+                        <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_link.asp">:link</a></td>
+                        <td class="notranslate">a:link</td>
+                        <td>Selects all unvisited links</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_not.asp">:not(<i>selector</i>)</a></td>
+                        <td>:not(p)</td>
+                        <td>Selects every element that is not a &lt;p&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_nth-child.asp">:nth-child(<i>n</i>)</a></td>
+                        <td>p:nth-child(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_nth-last-child.asp">:nth-last-child(<i>n</i>)</a></td>
+                        <td>p:nth-last-child(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_nth-last-of-type.asp">:nth-last-of-type(<i>n</i>)</a></td>
+                        <td>p:nth-last-of-type(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_nth-of-type.asp">:nth-of-type(<i>n</i>)</a></td>
+                        <td>p:nth-of-type(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_only-of-type.asp">:only-of-type</a></td>
+                        <td>p:only-of-type</td>
+                        <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_only-child.asp">:only-child</a></td>
+                        <td>p:only-child</td>
+                        <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_optional.asp">:optional</a></td>
+                        <td class="notranslate">input:optional</td>
+                        <td>Selects input elements with no "required" attribute</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_out-of-range.asp">:out-of-range</a></td>
+                        <td class="notranslate">input:out-of-range</td>
+                        <td>Selects input elements with a value outside a specified range</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_placeholder.asp">::placeholder</a></td>
+                        <td class="notranslate">input::placeholder</td>
+                        <td>Selects input elements with the &quot;placeholder&quot; attribute specified</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_read-only.asp">:read-only</a></td>
+                        <td class="notranslate">input:read-only</td>
+                        <td>Selects input elements with the "readonly" attribute specified</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_read-write.asp">:read-write</a></td>
+                        <td class="notranslate">input:read-write</td>
+                        <td>Selects input elements with the "readonly" attribute NOT specified</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_required.asp">:required</a></td>
+                        <td class="notranslate">input:required</td>
+                        <td>Selects input elements with the "required" attribute specified</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_root.asp">:root</a></td>
+                        <td>:root</td>
+                        <td>Selects the document's root element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_selection.asp">::selection</a></td>
+                        <td>::selection</td>
+                        <td>Selects the portion of an element that is selected by a user</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_target.asp">:target</a></td>
+                        <td>#news:target </td>
+                        <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_valid.asp">:valid</a></td>
+                        <td class="notranslate">input:valid</td>
+                        <td>Selects all input elements with a valid value</td>
+                    </tr>
+                    <tr>
+                        <td><a href="sel_visited.asp">:visited</a></td>
+                        <td class="notranslate">a:visited</td>
+                        <td>Selects all visited links</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
